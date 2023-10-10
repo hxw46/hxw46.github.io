@@ -1,0 +1,112 @@
+body {
+    font-family: Arial, sans-serif;
+    padding: 80px 20px 20px; /* 添加顶部的 padding 以避免内容被 header 遮挡 */
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: #EAF6F6;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: white;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: height 0.3s;
+    padding: 15px 20px;
+    z-index: 1000;
+    box-sizing: border-box;  /* 使元素的宽度包括内边距和边框 */
+}
+
+.site-title {
+    margin: 0;
+    font-size: 1.5em;
+}
+
+.nav-link {
+    text-decoration: none;
+    color: #333;
+    padding: 5px 10px;
+    border: 1px solid #333;
+    border-radius: 5px;
+    transition: all 0.3s;
+    margin-left: 10px;
+}
+
+.nav-link:hover {
+    background-color: #333;
+    color: #fff;
+}
+
+.index-page .nav-link[data-page="index"],
+.projects-page .nav-link[data-page="projects"],
+.contact-page .nav-link[data-page="contact"],
+.extra-page .nav-link[data-page="extra"] {
+    background-color: #333;
+    color: #fff;
+}
+
+.header nav {
+    display: flex;
+    gap: 10px;
+}
+
+hr{
+  background-color: white;
+  border-style: dotted none none;
+  border-color: grey;
+  border-width: 5px;
+  height: 0px;
+  width:5%;
+}
+
+h1, h2, h3{
+  color: #66BFBF;
+  margin-top: 20px;
+}
+
+.site-title {
+    font-size: 2em;
+}
+
+@media only screen and (max-width: 600px) {
+  .header {
+      position: static;
+      flex-direction: column;
+      align-items: stretch;
+  }
+
+  .header nav {
+      flex-direction: column;
+      align-items: stretch;
+  }
+
+  .nav-link {
+      width: 100%;
+      text-align: center;
+      padding: 10px;
+      margin: 5px 0;
+  }
+
+  .site-title {
+        font-size: 1.5em;
+    }
+
+  h1 {
+      font-size: 1.2em;
+  }
+
+  h2, h3 {
+      font-size: 1em;
+  }
+
+  img {
+      max-width: 100%;
+      height: auto;
+  }
+}
+
